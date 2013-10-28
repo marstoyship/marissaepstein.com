@@ -1,0 +1,78 @@
+
+header.splash
+  size: 100% 100%
+  color: white
+  background: red url('/img/bg-header.jpg') no-repeat
+  background-size: cover
+  text-align: center
+  text-transform: uppercase
+  z-index: -9998
+  position: relative
+  overflow: hidden
+
+  a:link, a:visited, a:active
+    color: white
+    text-decoration: none
+
+  nav
+    padding-top 50px
+    font-size: 24px
+    display: inline-block
+    width: 100%
+    z-index: 1
+
+    a
+      float: left
+
+    ul
+      float: right
+
+      li
+        float: left
+
+        &:first-child:after
+          content: ''
+          size: .5em
+          border-radius: 50%
+          background-color: white
+          display: inline-block
+          margin: 0 20px
+          margin-bottom: .125em
+
+  img.logo
+    display: block
+    margin: 0 auto
+
+  h1
+    letter-spacing: 0.05em
+    font-size: 44px
+    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
+
+  p
+    // letter-spacing: -0.02em
+    line-height: 48px
+    padding: 0
+    margin: 0 auto
+    max-width: 1000px
+    text-transform: none
+    font-size: 29px
+    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
+
+  .welcome:before
+    content: ''
+    background: linear-gradient(
+      rgba(206,42,20,0) 0%,
+      rgba(206,42,20,0.25) 25%,
+      rgba(206,42,20,0.5) 50%,
+      rgba(206,42,20,0.25) 75%,
+      rgba(206,42,20,0) 100%
+    )
+    position: absolute
+    size 100% 75%
+    top: 25%
+    left: 0
+    z-index: -1
+
+// 90 / 630
+// 120 / 630
+// 180 / 630

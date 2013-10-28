@@ -1,0 +1,15 @@
+mixin solid-button(width, text)
+  - var id = Math.random().toString(36).substr(7)
+  button.solid
+    a= text
+    svg(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", width=width + "px", height="33.957px", viewBox="0 0 " + width + " 33.957", enable-background="new 0 0 " + width + " 33.957")
+      linearGradient(id=id, gradientUnits="userSpaceOnUse", x1="0%", y1="0%", x2="0%", y2="100%")
+        stop(offset="0")
+        stop.color(offset="1")
+      path(fill="url(#" + id + ")", d="M" + width + ",16.994c0,1.21-0.462,2.421-1.389,3.345l-12.329,12.353l-0.002,0.005c-0.847,0.774-1.974,1.247-3.212,1.247L4.746,33.957C2.124,33.957,0,31.84,0,29.227v-12.24V4.73C0,2.117,2.124,0,4.746,0l"+ (width - 21.69) + ",0.018c1.237,0,2.365,0.473,3.212,1.247l0.001,0.005l12.342,12.364c0.927,0.924,1.389,2.135,1.389,3.345V16.994z")
+
+mixin outline-button(width, text)
+  button.outline
+    a= text
+    svg(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", width=width + "px", height="36px", viewBox="0 0" + width + " 36", enable-background="new 0 0 " + width + " 36")
+      path(fill="none", stroke-width="2", stroke-miterlimit="10", d="M" + (width - 0.94) + ",18.078c0,1.21-0.462,2.421-1.389,3.345l-12.329,12.353l-0.002,0.005c-0.847,0.774-1.974,1.247-3.212,1.247L5.817,35.041c-2.622,0-4.746-2.117-4.746-4.73V18.07V5.814c0-2.613,2.124-4.73,4.746-4.73l" + (width - 23.725) + ",0.017c1.237,0,2.365,0.474,3.212,1.248l0.001,0.005l12.342,12.364c0.927,0.924,1.389,2.135,1.389,3.345V18.078z")
