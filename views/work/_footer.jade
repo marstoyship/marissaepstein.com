@@ -1,11 +1,14 @@
+include ../shared/_buttons
+
 footer
   div
     h2 Signing Off, Good Buddy
 
-    .we-make-icon
-    .dribbble-icon
-    .linkedin-icon
-    .facebook-icon
-
-    span.email mars@marissaepstein.com
-    span.phone (561)654-4652
+    mixin we-make-button
+    mixin dribbble-button
+    mixin linkedin-button
+    mixin facebook-button
+  
+    .contact
+      span.email mars@marissaepstein.com
+      span.phone (561)654-4652

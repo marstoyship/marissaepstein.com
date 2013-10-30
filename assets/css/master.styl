@@ -20,27 +20,35 @@ html, body
 
 h1, h2
   @extends $gotham-black
-  text-transform: uppercase
+  font-size: 44px
+  text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
 
-a
-  @extends $gotham-bold
-  text-transform: uppercase
+h2
+  margin: 0 auto
+  font-size: 32px
 
 h3
-  @extends $whitney-medium
-  font-size: 29px
+  @extends $gotham-medium
+  font-size: 22px
+  color: black
 
 p
   @extends $whitney-book
+  text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
 
 header, footer
-  a
+  a, span
+    @extends $gotham-bold
+    font-size: 24px
     border-bottom: 2px solid transparent
-    &:hover
-      border-bottom: 2px solid white
+  
+  a:hover
+    border-bottom: 2px solid white
 
 button
-  @extends $gotham-black
+  @extends $gotham-medium
+  font-size: 16px
+  letter-spacing: 0.05em
   text-transform: uppercase
   background-color: transparent
   text-decoration: none
@@ -53,28 +61,29 @@ button
 
   &.solid
     a
-      color: white
       line-height: 34px
 
     &:hover stop, stop
       stop-color: #E24F2A
       transition-property: stop-color
-      transition-duration: 500ms
+      transition-duration: 200ms
 
     &:hover .color
       stop-color: #C53E27
 
   &.outline
+    a
+      @extends $gotham-bold
     &:hover a, a
       color: #E24F2A
       line-height: 36px
       transition-property: color
-      transition-duration: 500ms
+      transition-duration: 200ms
 
     &:hover path, path
       stroke: #F5897B
       transition-property: stroke
-      transition-duration: 500ms
+      transition-duration: 200ms
 
     &:hover
       a
