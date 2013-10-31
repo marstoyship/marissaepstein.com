@@ -1,0 +1,59 @@
+@import '_fonts'
+
+button
+  font-size: 16px
+  background-color: transparent
+  text-decoration: none
+  border: 0
+  outline: 0
+
+  a
+    position: absolute
+    padding-left: 16px
+
+  &.solid
+    a
+      @extends $gotham-medium
+      line-height: 35px
+      transition-property: color
+      transition-duration: 200ms      
+
+    stop
+      transition-property: stop-color
+      transition-duration: 200ms
+
+  &.outline
+    a
+      @extends $gotham-bold
+      line-height: 37px
+      transition-property: color
+      transition-duration: 200ms
+
+    path
+      transition-property: stroke
+      transition-duration: 200ms
+
+solid-button-color(fill-color, hover-fill-color, text-color, hover-text-color)
+  button.solid
+    a
+      color: text-color
+    stop
+      stop-color: fill-color
+    &:hover 
+      a
+        color: hover-text-color
+      .color
+        stop-color: hover-fill-color
+
+outline-button-color(stroke-color, hover-stroke-color, text-color, hover-text-color)
+  button.outline
+    a
+      color: text-color 
+    path
+      stroke: stroke-color
+
+    &:hover
+      a
+        color: hover-text-color
+      path
+        stroke: hover-stroke-color

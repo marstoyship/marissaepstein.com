@@ -1,11 +1,67 @@
+@import 'axis/animation'
+
+@import '../shared/_fonts'
+@import '../shared/_buttons'
+
 section.designs
+  outline-button-color(#ff8a7a, white, white, white)
+
+  min-width: 960px
+  max-width: 960px
+
+  h4, ul, li
+    line-height: 1.5em
+    margin: 0
+    padding: 0
+    text-align: left
+
+  h4
+    padding-top: 46px
+    padding-bottom: 20px
+
+  h4, li
+    padding-left: 50px
+    line-height: 34px
+
   & > div
     group()
     margin: 0 auto
+    min-width: 960px
     max-width: 960px
 
-    img
-      width 465px
-      height: auto
-      padding-bottom: 20px
-      column(6)
+  img
+    display: block
+    width: 100%
+    max-width 465px
+    height: auto
+
+  .case-study
+    cursor: pointer
+    column(6)
+    margin-bottom: 20px
+    position: relative
+
+    &:hover .overlay
+      opacity: 1
+
+  .overlay
+    transition-property: opacity
+    transition-duration: 400ms
+    opacity: 0
+    background: rgba(206, 41, 19, 0.85)
+    size: 100%
+    position: absolute
+    top: 0
+
+    button
+      position: absolute
+      bottom: 75px
+      left: 0
+      right: 0
+      margin-left: 9px
+
+  button
+    float: right
+    margin-top: 30px
+    margin-bottom: 60px
+
