@@ -14,7 +14,14 @@ footer
   float: right
   margin-top: -15px
 
-  span
+  a
+    color: white
+    text-decoration: none
+
+  a:hover
+    border-bottom: 2px solid #ff8a7a
+
+  span, a
     @extends $whitney-medium
     letter-spacing: 0.025em
     font-size: 22px  
@@ -23,28 +30,10 @@ footer
     clear: both
     text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
 
-  span.email
-    padding-bottom: 30px
+  .phone
+    padding-top: 30px
 
-.social-button
+button.social
   float: left
   margin-top: 7px
-  padding-right: 16px
-
-  cursor: pointer
-
-  stop
-    stop-color: #ffffff
-    transition-property: stop-color
-    transition-duration: 200ms
-
-  &:hover
-    zoom: 1
-    stop[offset="0.2803"]
-      stop-color: #fbfbfb
-    stop[offset="0.5707"]
-      stop-color: #efeeee
-    stop[offset="0.8648"]
-      stop-color: #dcdada 
-    stop[offset="0.9963"]
-      stop-color: #d1cece
+  margin-right: 16px

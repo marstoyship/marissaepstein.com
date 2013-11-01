@@ -35,7 +35,7 @@ section.designs
     max-width 465px
     height: auto
 
-  .case-study
+  .project
     cursor: pointer
     column(6)
     margin-bottom: 20px
@@ -53,14 +53,20 @@ section.designs
     position: absolute
     top: 0
 
+    & > a
+      top:0
+      position: absolute
+      display: block
+      size: 100%    
+
     button
       position: absolute
       bottom: 75px
       left: 0
       right: 0
-      margin-left: 9px
+      // margin-left: 9px
 
-  button
+  & > div > button
     float: right
     margin-top: 30px
     margin-bottom: 60px

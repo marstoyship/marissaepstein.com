@@ -1,26 +1,31 @@
 include ../shared/_buttons
 
-mixin case-study(name, image, skills)
-  .case-study
+mixin project(name, image, link, skills, type)
+  .project
     img(src="/img/#{image}", alt=name, width="465", height="465")
     .overlay
       h4= name
       ul
         - for s in skills 
           li= s
-      mixin outline-button('210', 'View Case Study')
+      a(href=link)
+      - if(type == "site")
+        mixin outline-button('144', 'View Site')      
+      - if(type == "study")
+        mixin outline-button('222', 'View Case Study')
 
+a(name="work")
 section.designs
   hr
   h3 Designs
 
   div
-    mixin case-study("Figmints", "465-figmints.jpg", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"])
-    mixin case-study("Toyship", "465-toyship.jpg", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"])
-    mixin case-study("Perfect Pears", "465-perfectpears.jpg", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"])
-    mixin case-study("EdTrips", "465-edtrips.jpg", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"])
-    mixin case-study("BookScanner", "465-bookscanner.jpg", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"])
-    mixin case-study("Dinosofts", "465-dinosofts.jpg", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"])
+    mixin project("Figmints", "465-figmints.jpg", "//www.figments.com", ["Branding", "Web", "Mobile", "UI/UX", "Print", "Social"], "site")
+    mixin project("Toyship", "465-toyship.jpg", "//marstoyship.com", ["Branding", "Toy Design", "Print", "Packaging", "Web"], "site")
+    mixin project("Perfect Pears", "465-perfectpears.jpg", "//www.perfectpears.com/planner", ["Web", "UI/UX", "App Design", "Print"], "site")
+    mixin project("EdTrips", "465-edtrips.jpg", "//www.edtrips.com",["Branding", "Web", "UI/UX", "Print", "Social"], "site")
+    mixin project("BookScanner", "465-bookscanner.jpg", "#", ["Branding", "Mobile", "UI/UX"], "study")
+    mixin project("Dinosofts", "465-dinosofts.jpg", "#", ["Branding", "Toy Design", "Packaging"], "study")
 
-    mixin solid-button('126', 'My Work')
+    //- mixin solid-button('136', 'My Work')
 
