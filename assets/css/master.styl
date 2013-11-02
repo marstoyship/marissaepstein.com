@@ -11,26 +11,153 @@
 normalize()
 base()
 
-html body
-  @extends $whitney-book
-  color: black
-
 h1
-  @extends $gotham-black
-  font-size: 42px
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
 
 h2
-  @extends $gotham-medium
-  font-size: 24px
+  background-color: white
+  display: inline-block
+  position: relative
+  padding: 0 20px
 
-h3
-  @extends $gotham-bold
-  font-size: 24px
-  color: red
+hr
+  line-height: 120px
+  border: 0
+  display: block
+  width: 100%
+  height: 2px
+  background-color: light-grey
+  position: absolute
+  top: 60px
 
-h4
-  @extends $gotham-bold
+.about-page
+  @extends $whitney-book
   font-size: 21px
+  line-height: 32px
+  color: black
+
+  width: 960px
+  margin: 0 auto
+
+  h1
+    @extends $gotham-black
+    font-size: 42px
+    line-height: 56px
+    color: red
+
+  h2
+    @extends $gotham-medium
+    font-size: 24px
+    line-height: 100px
+
+  h3
+    @extends $gotham-bold
+    font-size: 24px
+    line-height: 24px
+    color: red
+
+  h4
+    @extends $gotham-bold
+    font-size: 21px
+    line-height: 32px
+
+  section
+    position: relative
+    header
+      text-align: center
+
+  section.intro
+    img
+      float: right
+      padding-left: 50px
+
+  section.what-i-do
+    group()
+    li 
+      column(2)
+      text-align: center
+
+  img[title="Branding"]
+    padding: 0 31.5px
+
+  img[title="Direction"]
+    padding: 0 33px
+
+  img[title="Web"]
+    padding: 0 8px
+
+  img[title="UX"]
+    padding: 0 16px
+
+  img[title="Packaging"]
+    padding: 0 33px
+
+  img[title="Print"]
+    padding: 0 28.5px
+
+  section.how-i-do-it 
+    group()
+    li
+      column(4)
+
+      text-indent: 30px
+
+      &:before
+        position: relative
+        content: "• "
+        color: red
+
+  section.experience
+    font-size: 18px
+    line-height: 28px
+
+    h3, h4,  p
+      padding: 0
+      margin: 0
+
+    h3:first-child
+      padding-top: 20px
+
+    h3
+      padding-top: 60px
+
+    em
+      font-size: 21px
+      line-height: 44px
+
+    li:before
+      position: relative
+      content: "• "
+      color: red
+
+    section
+      column(6)
+
+    section.education
+      overflow: visible
+      div
+        margin-top: -70px
+        margin-left: -10px
+        padding-top: 70px
+        padding-left: 60px
+        padding-bottom: 364px
+        border-left: 2px solid light-grey
+
+    section.employment
+      div
+        padding-right: 50px
+
+
+    // section.education
+    //   div
+    //     padding-left: 60px
+
 
 // *, ul, h1, h2, h3, p
 //   margin: 0
