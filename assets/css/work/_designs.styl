@@ -3,71 +3,72 @@
 @import '../shared/_fonts'
 @import '../shared/_buttons'
 
-section.designs
-  outline-button-color(#ff8a7a, white, white, white)
+.home-page
+  section.designs
+    outline-button-color(#ff8a7a, white, white, white)
 
-  min-width: 960px
-  max-width: 960px
-
-  h4, ul, li
-    line-height: 1.5em
-    margin: 0
-    padding: 0
-    text-align: left
-
-  h4
-    padding-top: 46px
-    padding-bottom: 20px
-
-  h4, li
-    padding-left: 50px
-    line-height: 34px
-
-  & > div
-    group()
-    margin: 0 auto
     min-width: 960px
     max-width: 960px
 
-  img
-    display: block
-    width: 100%
-    max-width 465px
-    height: auto
+    h4, ul, li
+      line-height: 1.5em
+      margin: 0
+      padding: 0
+      text-align: left
 
-  .project
-    cursor: pointer
-    column(6)
-    margin-bottom: 20px
-    position: relative
+    h4
+      padding-top: 46px
+      padding-bottom: 20px
 
-    &:hover .overlay
-      opacity: 1
+    h4, li
+      padding-left: 50px
+      line-height: 34px
 
-  .overlay
-    transition-property: opacity
-    transition-duration: 400ms
-    opacity: 0
-    background: rgba(206, 41, 19, 0.85)
-    size: 100%
-    position: absolute
-    top: 0
+    & > div
+      group()
+      margin: 0 auto
+      min-width: 960px
+      max-width: 960px
 
-    & > a
-      top:0
-      position: absolute
+    img
       display: block
-      size: 100%    
+      width: 100%
+      max-width 465px
+      height: auto
 
-    button
+    .project
+      cursor: pointer
+      column(6)
+      margin-bottom: 20px
+      position: relative
+
+      &:hover .overlay
+        opacity: 1
+
+    .overlay
+      transition-property: opacity
+      transition-duration: 400ms
+      opacity: 0
+      background: rgba(206, 41, 19, 0.85)
+      size: 100%
       position: absolute
-      bottom: 75px
-      left: 0
-      right: 0
-      // margin-left: 9px
+      top: 0
 
-  & > div > button
-    float: right
-    margin-top: 30px
-    margin-bottom: 60px
+      & > a
+        top:0
+        position: absolute
+        display: block
+        size: 100%    
+
+      button
+        position: absolute
+        bottom: 75px
+        left: 0
+        right: 0
+        // margin-left: 9px
+
+    & > div > button
+      float: right
+      margin-top: 30px
+      margin-bottom: 60px
 

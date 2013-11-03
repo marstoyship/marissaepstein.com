@@ -1,0 +1,50 @@
+
+footer
+  size 100% 350px
+  background: red url('/img/bg-footer.jpg') no-repeat
+  background-size: cover
+  color: white
+  text-align: center
+
+  & > div
+    padding: 0 12%
+  
+  a, span
+    @extends $gotham-bold
+    font-size: 24px
+    border-bottom: 2px solid transparent
+
+  h2
+    @extends $gotham-black
+    font-size: 32px
+    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
+    padding-top: 72px
+    padding-bottom: 72px
+
+.contact
+  float: right
+  margin-top: -15px
+
+  a
+    color: white
+    text-decoration: none
+
+  a:hover
+    border-bottom: 2px solid #ff8a7a
+
+  span, a
+    @extends $whitney-medium
+    letter-spacing: 0.025em
+    font-size: 22px  
+    text-transform: none
+    float: right
+    clear: both
+    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
+
+  .phone
+    padding-top: 30px
+
+button.social
+  float: left
+  margin-top: 7px
+  margin-right: 16px
