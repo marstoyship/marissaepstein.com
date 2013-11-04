@@ -1,5 +1,3 @@
-#= require "_helper"
-
 # requirejs makes life a lot easier when dealing with more than one
 # javascript file and any sort of dependencies, and loads faster.
 
@@ -20,7 +18,6 @@ require ['jquery', 'lodash'], ($, _) ->
       navShouldBeShown = $(window).scrollTop() >= headerHeight
 
       if navShouldBeShown and not navShown
-        console.log 'here'
         navShown = true
         $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
       else if not navShouldBeShown and navShown
@@ -30,3 +27,11 @@ require ['jquery', 'lodash'], ($, _) ->
     $(window).scroll _.throttle(toggleNav, 50)
 
     toggleNav()
+
+    $('a[href*=#]:not([href=#])').click (event) ->
+      name = $(event.target).attr('href').split('#')[1]
+
+      $('html, body').animate({
+        scrollTop: $("a[name='#{name}']").offset().top
+      }, 500)
+      return false
