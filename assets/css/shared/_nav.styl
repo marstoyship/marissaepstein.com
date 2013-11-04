@@ -1,5 +1,6 @@
 nav.sticky
-  size: 76% 55px
+  display: none
+  size: 76% 50px
   background-color: rgba(206, 41, 19, 0.9)
   position: fixed
   z-index: 10000
@@ -7,8 +8,9 @@ nav.sticky
   left: 0
   text-align: center
   color: white
-  padding-top: 30px
-
+  padding-top: 25px
+  -webkit-backface-visibility: hidden;
+  
   a:link, a:visited, a:active
     color: white
     text-decoration: none
@@ -25,7 +27,7 @@ nav.sticky
     display: inline-block
     position: relative
     top: -15px
-    left: -22px
+    left: -13px
 
   span 
     float: left

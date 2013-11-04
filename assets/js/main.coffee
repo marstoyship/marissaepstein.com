@@ -10,4 +10,23 @@ require.config
     lodash: '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min'
 
 require ['jquery', 'lodash'], ($, _) ->
-  console.log 'jquery loaded (via assets/js/main.coffee)'
+  $ ->
+    
+    navShown     = false        
+    headerHeight = $('body > header').height() || 0
+    $nav         = $('body > nav')
+
+    toggleNav    = ->
+      navShouldBeShown = $(window).scrollTop() >= headerHeight
+
+      if navShouldBeShown and not navShown
+        console.log 'here'
+        navShown = true
+        $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
+      else if not navShouldBeShown and navShown
+        navShown = false
+        $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
+
+    $(window).scroll _.throttle(toggleNav, 50)
+
+    toggleNav()
