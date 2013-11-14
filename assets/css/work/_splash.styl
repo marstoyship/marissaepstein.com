@@ -28,7 +28,7 @@ header.splash
     font-size: 24px
     border-bottom: 2px solid transparent
 
-  a:hover 
+  a:hover
     border-bottom: 2px solid white
 
   & > div
@@ -66,10 +66,34 @@ header.splash
           margin: 0 20px
           margin-bottom: .125em
 
-  img.logo
-    display: block
+  .logo
+    display: inline-block
     margin: 0 auto
-    padding-bottom: 100px
+    margin-bottom: 100px
+    position: relative
+
+    .moon
+      size: 100%
+      position: absolute
+      background-image: url('/img/logo-white_shadowed-just-ball.png')
+      background-repeat: no-repeat
+      animation-duration: 20s
+      animation-name: orbit
+      animation-iteration-count: infinite
+      animation-timing-function:linear
+      -webkit-backface-visibility: hidden
+
+    .phobos
+      left: 0
+      bottom: 0
+      background-position: bottom left
+      // transform-origin: 100% 0%
+
+    .deimos
+      top: 0
+      right: 0
+      background-position: top right
+      // transform-origin: 0% 100%
 
   h1
     padding-bottom: 40px
@@ -107,4 +131,10 @@ header.splash
     vertical-align: middle
     text-align: center
     height: 430px
+
+@keyframes orbit
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
 
