@@ -1,20 +1,21 @@
 include ../shared/_buttons
 
-mixin shot(name, image, link)
+mixin shot
   .shot
-    img(src=image, alt=name, width="300", height="225")
+    img(width="300", height="225")
     .overlay
-      h4= name
-      a(href=link)
-      mixin outline-button('200', 'View Shot', link)
+      h4 Loading...
+      a
+      mixin outline-button('200', 'View Shot', "//dribbble.com/mars.toyship")
 
 section.dribbble
   hr
   h3 Dribbble
+  img(src="/img/dribbble-pink.png", alt="dribbble", width="25", height="25")
 
   .shots
-    mixin shot("Zoom the Balloon", "/img/dribbble_shot-1.jpg", "//dribbble.com/shots/1307031-Zoom-the-Balloon-is-ready")
-    mixin shot("We Make Pagination", "/img/dribbble_shot-2.jpg", "//dribbble.com/shots/1254291-We-Make-Splash-Pagination")
-    mixin shot("Paper Plane Variations", "/img/dribbble_shot-3.jpg", "//dribbble.com/shots/985362-Plane-Variations")
+    mixin shot
+    mixin shot
+    mixin shot
 
   mixin outline-button('136', 'Dribbble', '//dribbble.com/mars.toyship')

@@ -1,14 +1,29 @@
-section.dribbble
+.home-page section.dribbble
   group()
 
   color: white
 
+  // h3
+  //   padding-left:
+  //   padding-right: 54px
+
   h4
     margin-left: 50px
+    margin-right: 50px
+    margin-top: 45px
+    margin-bottom: 0px
     text-align: left
     color: white
-    line-height: 34px
-    height: 50px
+    line-height: 24px
+    height: 75px
+    font-size: 18px
+    text-overflow: ellipsis
+    overflow: hidden
+
+  // h3:after
+  //   size: 25
+  //   position: relative
+  //   background-image: url('/img/dribbble-pink.png')
 
   .shots
     padding-top: 20px
@@ -17,6 +32,10 @@ section.dribbble
       column(4)
       size 300px 225px
       position: relative
+      background-image: url('/img/spinner.gif')
+      background-repeat: no-repeat
+      background-color: light-grey
+      background-position: center center
 
       &:hover .overlay
         opacity: 1
@@ -42,6 +61,15 @@ section.dribbble
       margin: 0 auto
       a
         padding-left: 40px
+
+  & > h3
+    padding-right: 10px
+
+  & > img
+    background-color: white
+    position: relative
+    top: 4px
+    padding-right: 20px
 
   & > button
     float: right

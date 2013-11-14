@@ -6,11 +6,12 @@ require.config
   paths:
     jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min'
     lodash: '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min'
+    jribbble: '/js/jquery.jribbble-1.0.1.ugly'
 
-require ['jquery', 'lodash'], ($, _) ->
+require ['jquery', 'lodash', 'jribbble'], ($, _) ->
   $ ->
-    
-    navShown     = false        
+
+    navShown     = false
     headerHeight = $('body > header').height() || 0
     $nav         = $('body > nav')
 
@@ -35,3 +36,17 @@ require ['jquery', 'lodash'], ($, _) ->
         scrollTop: $("a[name='#{name}']").offset().top
       }, 500)
       return false
+
+      $.trim(title).substring(0, 10).split(" ").slice(0, -1).join(" ") + "...";
+
+    onShots = (page) ->
+      $('.shot').each (i, s) ->
+        url   = page.shots[i].short_url
+        thumb = page.shots[i].image_400_url
+        title = $.trim(page.shots[i].title)
+
+        $('img', s).attr 'src', thumb
+        $('h4', s).text title
+        $('a', s).attr 'href', url
+
+    $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 3
