@@ -8,45 +8,46 @@ require.config
     lodash: '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min'
     jribbble: '/js/jquery.jribbble-1.0.1.ugly'
 
-require ['jquery', 'lodash', 'jribbble'], ($, _) ->
-  $ ->
+require ['jquery', 'lodash'], ($, _) ->
+  require ['jribbble'], ->
+    $ ->
 
-    navShown     = false
-    headerHeight = $('body > header').height() || 0
-    $nav         = $('body > nav')
+      navShown     = false
+      headerHeight = $('body > header').height() || 0
+      $nav         = $('body > nav')
 
-    toggleNav    = ->
-      navShouldBeShown = $(window).scrollTop() >= headerHeight
+      toggleNav    = ->
+        navShouldBeShown = $(window).scrollTop() >= headerHeight
 
-      if navShouldBeShown and not navShown
-        navShown = true
-        $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
-      else if not navShouldBeShown and navShown
-        navShown = false
-        $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
+        if navShouldBeShown and not navShown
+          navShown = true
+          $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
+        else if not navShouldBeShown and navShown
+          navShown = false
+          $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
 
-    $(window).scroll _.throttle(toggleNav, 50)
+      $(window).scroll _.throttle(toggleNav, 50)
 
-    toggleNav()
+      toggleNav()
 
-    $('a[href*=#]:not([href=#])').click (event) ->
-      name = $(event.target).attr('href').split('#')[1]
+      $('a[href*=#]:not([href=#])').click (event) ->
+        name = $(event.target).attr('href').split('#')[1]
 
-      $('html, body').animate({
-        scrollTop: $("a[name='#{name}']").offset().top
-      }, 500)
-      return false
+        $('html, body').animate({
+          scrollTop: $("a[name='#{name}']").offset().top
+        }, 500)
+        return false
 
-      $.trim(title).substring(0, 10).split(" ").slice(0, -1).join(" ") + "...";
+        $.trim(title).substring(0, 10).split(" ").slice(0, -1).join(" ") + "...";
 
-    onShots = (page) ->
-      $('.shot').each (i, s) ->
-        url   = page.shots[i].short_url
-        thumb = page.shots[i].image_400_url
-        title = $.trim(page.shots[i].title)
+      onShots = (page) ->
+        $('.shot').each (i, s) ->
+          url   = page.shots[i].short_url
+          thumb = page.shots[i].image_400_url
+          title = $.trim(page.shots[i].title)
 
-        $('img', s).attr 'src', thumb
-        $('h4', s).text title
-        $('a', s).attr 'href', url
+          $('img', s).attr 'src', thumb
+          $('h4', s).text title
+          $('a', s).attr 'href', url
 
-    $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 3
+      $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 3
