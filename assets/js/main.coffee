@@ -17,6 +17,8 @@ require ['jquery', 'lodash'], ($, _) ->
       $nav         = $('body > nav')
 
       toggleNav    = ->
+        $nav.css left: -$(window).scrollLeft()
+
         navShouldBeShown = $(window).scrollTop() >= headerHeight
 
         if navShouldBeShown and not navShown
@@ -26,7 +28,7 @@ require ['jquery', 'lodash'], ($, _) ->
           navShown = false
           $nav.animate({height: "toggle", opacity: "toggle"}, queue: false)
 
-      $(window).scroll _.throttle(toggleNav, 50)
+      $(window).scroll _.throttle(toggleNav, 10)
 
       toggleNav()
 
