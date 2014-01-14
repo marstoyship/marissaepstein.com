@@ -45,7 +45,7 @@ require ['jquery', 'lodash'], ($, _) ->
       onShots = (page) ->
         $('.shot').each (i, s) ->
           url   = page.shots[i].short_url
-          thumb = page.shots[i].image_400_url
+          thumb = page.shots[i].image_teaser_url
           title = $.trim(page.shots[i].title)
 
           $('img', s).attr 'src', thumb
