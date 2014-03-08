@@ -34,12 +34,14 @@
     font-size: 20px
 
   section
-    min-width: 960px
+    // min-width: 960px
     max-width: 960px
     margin: 0 auto
     text-align: center
     line-height: 120px
     position: relative
+    @media (max-width: 570px)
+      line-height: 50px
 
     h3
       background-color: white
@@ -56,6 +58,14 @@
       z-index: -1
       position: absolute
       top: 60px
+
+      @media (max-width: 980px)
+        width: auto
+        position: relative
+        margin: 0 20px   
+      
+      @media (max-width: 570px)
+        top: 25px
 
     solid-button-color(#E24F2A, #C53E27, white, white)
     // outline-button-color(#F5897B, #E45430, #E24F2A, #C53E27)
