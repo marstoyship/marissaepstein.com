@@ -52,4 +52,4 @@ require ['jquery', 'lodash'], ($, _) ->
           $('h4', s).text title
           $('a', s).attr 'href', url
 
-      $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 3
+      $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 6

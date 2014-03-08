@@ -5,7 +5,9 @@
 
 .home-page
   color: white
-  padding-bottom: 60px
+  padding-bottom: 60px      
+  @media (max-width: 960px)
+    padding-bottom: 10px
 
   h1, h2
     @extends $gotham-black
@@ -40,8 +42,8 @@
     text-align: center
     line-height: 120px
     position: relative
-    @media (max-width: 570px)
-      line-height: 50px
+    @media (max-width: 640px)
+        line-height: 50px
 
     h3
       background-color: white
@@ -49,7 +51,8 @@
       position: relative
       padding: 0 20px
 
-    hr
+
+    .filligre
       border: 0
       display: block
       width: 100%
@@ -64,7 +67,7 @@
         position: relative
         margin: 0 20px   
       
-      @media (max-width: 570px)
+      @media (max-width: 640px)
         top: 25px
 
     solid-button-color(#E24F2A, #C53E27, white, white)
