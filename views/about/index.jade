@@ -3,53 +3,61 @@ include ../shared/_buttons
 .about-page
 
   section.intro
-    img(src="/img/me-portrait.jpg", alt="Portrait")
-    :markdown
-      # I lose myself in design.
-      # It's kind of a problem.
+    h1 I lose myself in design. It's kind of a problem.
+    
+    .img-container
+      img(src="/img/me-portrait.jpg", alt="Portrait") 
+    
+    .story
+      :markdown
+        I know that everyone and their mother says they’re passionate. But I would still have to say I’m obsessed. Addicted. Intoxicated. Sue me.
 
-      I know that everyone and their mother says they’re passionate. But I would still have to say I’m obsessed. Addicted. Intoxicated. Sue me.
-
-      I’ve been drinking the design Kool-Aid ever since I was a kid in Florida—doodling with my architect parents; creating vectors of robots and dinosaurs in a magnet arts high school. At the University of Cincinnati, I had my eyes opened by Swiss design, and contributed to major brands during multiple internships. Since graduating, I’ve had the privilege of designing for a living and reinvesting in a constant flow of design-related books and additions to my designer vinyl collection. It’s a vicious cycle. My obsession leads me to branch out from my traditional design background. It’s allowed me to develop a love of web design, plus countless crushes on great user experiences. I’m still thirsty for knowledge and new opportunities. Cheers.
+        I’ve been drinking the design Kool-Aid ever since I was a kid in Florida—doodling with my architect parents; creating vectors of robots and dinosaurs in a magnet arts high school. At the University of Cincinnati, I had my eyes opened by Swiss design, and contributed to major brands during multiple internships. Since graduating, I’ve had the privilege of designing for a living and reinvesting in a constant flow of design-related books and additions to my designer vinyl collection. It’s a vicious cycle. My obsession leads me to branch out from my traditional design background. It’s allowed me to develop a love of web design, plus countless crushes on great user experiences. I’m still thirsty for knowledge and new opportunities. Cheers.
 
   section.what-i-do
-    hr
+    hr.filligre
     header
       h2 What I Do
       ul
         li
           img(src="/img/icon-branding.png", alt="Branding", title="Branding")
+          br
           = "Branding"
           br
           = "& Identity"
         li
           img(src="/img/icon-direction.png", alt="Direction", title="Direction")
+          br
           = "Art"
           br
           = "Direction"
         li
           img(src="/img/icon-web.png", alt="Web", title="Web")
+          br
           = "Website &" 
           br
           = "App Design"
         li
           img(src="/img/icon-ux.png", alt="UX", title="UX")
+          br
           = "User" 
           br
           = "Experience"
         li
           img(src="/img/icon-packaging.png", alt="Packaging", title="Packaging")
+          br
           = "Packaging"
           br
           = "Design"
         li
           img(src="/img/icon-print.png", alt="Print", title="Print")
+          br
           = "Print"
           br
           = "Design"
 
   section.how-i-do-it
-    hr
+    hr.filligre
     header
       h2 How I Do It
     :markdown
@@ -66,7 +74,7 @@ include ../shared/_buttons
       + Microsoft Office
 
   section.experience
-    hr
+    hr.filligre
     section.employment
       header
         h2 Experience
@@ -101,7 +109,9 @@ include ../shared/_buttons
           #### DESIGN INTERN
           Played a key role in a variety of design projects for Kraft. Primarily created packaging designs, but also worked on brand and strategy creation, for brands such as Macaroni & Cheese, Digiorno, and Athenos.
 
+    
     section.education
+      hr.filligre.education
       header
         h2 Education
       div
@@ -134,14 +144,14 @@ include ../shared/_buttons
           + Design: Creation of Artifacts in Society
           + Mobile First 
           + Responsive Web Design 
-          + The User Experience Team of One: <br> A Research and Design Survival Guide
-          + Don't Make Me Think: A Common Sense Approach <br> to Web Usability
-          + A Designer's Research Manual: Succeed in Design by <br> Knowing Your Clients and What They Really Need 
-          + The Lean Startup: <br> How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
+          + The User Experience Team of One: A Research and Design Survival Guide
+          + Don't Make Me Think: A Common Sense Approach to Web Usability
+          + A Designer's Research Manual: Succeed in Design by Knowing Your Clients and What They Really Need 
+          + The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses
           + HTML & CSS: Design and Build Websites 
-          + Designing Brand Identity: An Essential Guide for <br> the Whole Branding Team
+          + Designing Brand Identity: An Essential Guide for the Whole Branding Team
           + Graphic Design Referenced 
-          + Above the Fold: Understanding the Principles of <br> Successful Web Site Design
+          + Above the Fold: Understanding the Principles of Successful Web Site Design
           + 100 Things Every Designer Needs to Know About People 
 
   mixin solid-button('240', 'Download Resume', '/dl/MarissaEpstein-Resume-2013.pdf')
