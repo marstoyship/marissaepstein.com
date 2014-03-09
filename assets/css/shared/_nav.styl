@@ -52,15 +52,17 @@ nav.sticky
   ul
     float: right
 
-    li.work
-      float: left  
-      @media (max-width: 570px)
-        margin: 0 10px      
+    li
+      float: left
 
-    li.me
-      float: left  
-      @media (max-width: 570px)  
-        margin: 0 0 0 12px
+      .work 
+        @media (max-width: 570px)
+          margin: 0 10px    
+          paddiing-right: 20px  
+
+      .me  
+        @media (max-width: 570px)  
+          margin: 0 0 0 12px
 
       &:first-child:after
         content: ''
@@ -70,6 +72,8 @@ nav.sticky
         display: inline-block
         margin: 0 20px
         margin-bottom: .3em
-        @media (max-width: 570px)
-          content: none
+        @media (max-width: 420px)
+          // content: none
+          margin: 0 10px
+          margin-bottom: .3em
 
