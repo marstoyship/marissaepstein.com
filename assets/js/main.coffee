@@ -13,7 +13,7 @@ require ['jquery', 'lodash'], ($, _) ->
     $ ->
 
       navShown     = false
-      headerHeight = $('body > header').height() || 0
+      headerHeight = $('body > header').height() || $('.project-hero').height() || 0
       $nav         = $('body > nav')
 
       toggleNav    = ->
