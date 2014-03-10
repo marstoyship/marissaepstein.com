@@ -13,7 +13,7 @@ require ['jquery', 'lodash'], ($, _) ->
     $ ->
 
       navShown     = false
-      headerHeight = $('body > header').height() || 0
+      headerHeight = $('body > header').height() || $('.project-hero').height() || 0
       $nav         = $('body > nav')
 
       toggleNav    = ->
@@ -45,11 +45,11 @@ require ['jquery', 'lodash'], ($, _) ->
       onShots = (page) ->
         $('.shot').each (i, s) ->
           url   = page.shots[i].short_url
-          thumb = page.shots[i].image_teaser_url
+          thumb = page.shots[i].image_400_url or page.shots[i].image_url
           title = $.trim(page.shots[i].title)
 
           $('img', s).attr 'src', thumb
           $('h4', s).text title
           $('a', s).attr 'href', url
 
-      $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 3
+      $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 6

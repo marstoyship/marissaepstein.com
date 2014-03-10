@@ -1,31 +1,28 @@
-header.splash
-  // min-width: 960px
-  size: 100%
+header.project-hero
+  size: 100% 400px
   color: white
-  background: red url('/img/bg-header.jpg') no-repeat
+  background: red url('/img/bg-branding-header.jpg') no-repeat
   background-size: cover
   text-align: center
-  text-transform: uppercase
   z-index: -9998
   overflow: hidden
   display: block
   position: relative
+  // min-width: 960px
+  text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
 
   @media (max-width: 570px)
     height: auto
-    padding-bottom: 30px
 
   h1, h2
     @extends $gotham-black
     font-size: 44px
-    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
 
     @media (max-width: 570px)
       font-size: 36px
 
   p
     @extends $whitney-book
-    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
 
   li
     @extends $whitney-medium
@@ -39,19 +36,30 @@ header.splash
     @media (max-width: 570px)
       font-size: 21px
 
+  ul
+    float: right
+
+    @media (max-width: 750px)
+      float: none
+      margin: 10px auto 0
+
+    li
+      float: left
+      
+      @media (max-width: 750px)
+        float: none
+        display: inline
+
   a:hover
     border-bottom: 2px solid white
 
   & > div
-    margin: 0 auto
-    
-    // @media (max-width: 570px)
-    //   padding: 0 24px
+    padding: 0 12%
 
   a:link, a:visited, a:active
     color: white
     text-decoration: none
- 
+
   nav
     padding: 0 12%
     left: 0
@@ -61,13 +69,13 @@ header.splash
     font-size: 24px
     display: inline-block
     z-index: 10
+
     @media (max-width: 570px)
       padding-top: 20px
 
-
     span
       float: left
-
+      
       @media (max-width: 750px)
         display: block
         float: none
@@ -81,7 +89,7 @@ header.splash
 
       li
         float: left
-        
+
         @media (max-width: 750px)
           float: none
           display: inline
@@ -95,48 +103,12 @@ header.splash
           margin: 0 20px
           margin-bottom: .125em
 
-  .logo
-    display: inline-block
-    margin: 0 auto
-    margin-bottom: 100px
-    position: relative
-
-    @media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2)
-      margin-bottom: 50px
-      margin-top: 120px
-
-    @media (max-width: 750px) 
-      margin-bottom: 50px
-      margin-top: 120px
-
-    .moon
-      size: 100%
-      position: absolute
-      background-image: url('/img/logo-white_shadowed-just-ball.png')
-      background-repeat: no-repeat
-      animation-duration: 20s
-      animation-name: orbit
-      animation-iteration-count: infinite
-      animation-timing-function:linear
-      -webkit-backface-visibility: hidden
-
-    .phobos
-      left: 0
-      bottom: 0
-      background-position: bottom left
-      // transform-origin: 100% 0%
-
-    .deimos
-      top: 0
-      right: 0
-      background-position: top right
-      // transform-origin: 0% 100%
-
   h1
     padding-bottom: 40px
 
-    @media (max-width: 570px)
-      text-align: center
+    @media (max-width: 750px)
+      padding-top: 60px
+      padding-bottom: 20px
 
   p
     line-height: 48px
@@ -154,27 +126,10 @@ header.splash
       font-size: 19px
       line-height: 30px
 
-  .welcome:before
-    content: ''
-    background: linear-gradient(
-      rgba(206,42,20,0) 0%,
-      rgba(206,42,20,0.25) 25%,
-      rgba(206,42,20,0.5) 50%,
-      rgba(206,42,20,0.25) 75%,
-      rgba(206,42,20,0) 100%
-    )
-    position: absolute
-    size 100% 75%
-    top: 25%
-    left: 0
-    z-index: -1
-
   & > div
     width: 76%
     display: table
     height: 100%
-    @media (max-width: 570px)
-      width: 90%
 
   .welcome
     display: table-cell
@@ -182,9 +137,5 @@ header.splash
     text-align: center
     height: 430px
 
-@keyframes orbit
-  from
-    transform: rotate(0deg)
-  to
-    transform: rotate(360deg)
-
+    @media (max-width: 570px)
+      height: 330px

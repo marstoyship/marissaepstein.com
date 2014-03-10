@@ -1,129 +1,95 @@
-header.branding
-  size: 100% 400px
-  color: white
-  background: red url('/img/bg-branding-header.jpg') no-repeat
-  background-size: cover
-  text-align: center
-  z-index: -9998
-  overflow: hidden
-  display: block
-  position: relative
-  min-width: 960px
-
-  h1, h2
-    @extends $gotham-black
-    font-size: 44px
-    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
-
-  p
-    @extends $whitney-book
-    text-shadow: 0px 0px 10px rgba(145, 17, 0, 0.5)
-
-  li
-    @extends $whitney-medium
-    font-size: 20px
-
-  a, span
-    @extends $gotham-bold
-    font-size: 24px
-    border-bottom: 2px solid transparent
-
-  a:hover
-    border-bottom: 2px solid white
-
-  & > div
-    padding: 0 12%
-
-  a:link, a:visited, a:active
-    color: white
-    text-decoration: none
-
-  nav
-    padding: 0 12%
-    left: 0
-    width: 76%
-    position: absolute
-    padding-top 50px
-    font-size: 24px
-    display: inline-block
-    z-index: 10
-
-    span
-      float: left
-
-    ul
-      float: right
-
-      li
-        float: left
-
-        &:first-child:after
-          content: ''
-          size: .5em
-          border-radius: 50%
-          background-color: white
-          display: inline-block
-          margin: 0 20px
-          margin-bottom: .125em
-
-  h1
-    padding-bottom: 40px
-
-  p
-    line-height: 48px
-    padding: 0
-    margin: 0 auto
-    max-width: 1000px
-    text-transform: none
-    font-size: 29px
-
-  .welcome:before
-    content: ''
-    background: linear-gradient(
-      rgba(206,42,20,0) 0%,
-      rgba(206,42,20,0.25) 25%,
-      rgba(206,42,20,0.5) 50%,
-      rgba(206,42,20,0.25) 75%,
-      rgba(206,42,20,0) 100%
-    )
-    position: absolute
-    size 100% 75%
-    top: 25%
-    left: 0
-    z-index: -1
-
-  & > div
-    width: 76%
-    display: table
-    height: 100%
-
-  .welcome
-    display: table-cell
-    vertical-align: middle
-    text-align: center
-    height: 430px
+.project-casestudy.branding
+  .project-hero
+      h1, h2, p
+        text-shadow: 0px 0px 10px rgba(50, 50, 50, 0.5)
 
 section.brands
-  width: 960px
+  max-width: 960px
+  position: relative
+  group()
+  // height: 4205px
   margin: 0 auto
   padding-top: 70px
-  padding-bottom: 60px
+  padding-bottom: 30px
+  @media (max-width: 570px)
+    padding-top: 10px
+    padding-bottom: 10px
+    // height: 7234px
 
-  table
+  .brand 
+    position: relative
+    column(6)
+    @media (max-width: 570px)
+      column(12)
+      float: none
+      width: 90%
+      margin: 0 auto
+
+    img
+      display: block
+      max-width: 465px
+      height: auto
+
+      @media (max-width: 980px)
+        max-width: 100%
+
+  hr
+    width: 90%
+    height: 2px
+    background-color: light-grey
+    border:none
+    box-sizing:border-box
     margin: 0 auto
-    border-collapse:collapse
+    @media (max-width: 570px)  
+      width: 70%
+      
+    &.odd
+      display:none
+      @media (max-width: 570px)  
+        display: block
+    
+    &.special 
+      display: block 
+      width: 2px
+      height: 96%
+      position: absolute
+      left: 0
+      right: 0
+      top: 75px
+      bottom: 75px
+      @media (max-width: 570px)  
+        display: none
 
-    td
-      border: 2px solid light-grey
+      // &.first, &.second  
+      //   display: block 
+      //   width: 2px
+      //   height: 280px
+      //   position: absolute
+      //   left: 33.3333333%
+      // &.second 
+      //   left: 66.6666666%
 
-      &:nth-child(odd)
-        border-left: none
+      // &.third 
+      //    display: block      
 
-      &:nth-child(even)
-        border-right: none
 
-    tr:first-child td
-      border-top: none
+        
 
-    tr:last-child td
-      border-bottom: none
+  // table
+  //   margin: 0 auto
+  //   border-collapse:collapse
+
+  //   td
+  //     border: 2px solid light-grey
+
+  //     &:nth-child(odd)
+  //       border-left: none
+
+  //     &:nth-child(even)
+  //       border-right: none
+
+  //   tr:first-child td
+  //     border-top: none
+
+  //   tr:last-child td
+  //     border-bottom: none

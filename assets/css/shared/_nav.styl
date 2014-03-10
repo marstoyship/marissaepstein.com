@@ -1,16 +1,25 @@
 nav.sticky
-  min-width: 960px
+  // min-width: 750px
   display: none
-  size: 76% 50px
+  size: 84% 50px
   background-color: rgba(206, 41, 19, 0.9)
   position: fixed
   z-index: 10000
-  padding: 0 12%
+  padding: 0 8%
   left: 0
   text-align: center
   color: white
   padding-top: 25px
   -webkit-backface-visibility: hidden;
+
+  @media (max-width: 750px)
+    // visibility: hidden
+    position: absolute
+
+  @media (max-width: 570px)
+    size: 88% 50px
+    padding: 0 6%
+    padding-top: 25px
 
   a:link, a:visited, a:active
     color: white
@@ -20,8 +29,12 @@ nav.sticky
     @extends $gotham-bold
     font-size: 24px
     border-bottom: 2px solid transparent
+    
+  a.link.name
+    @media (max-width: 750px)
+      display: none
 
-  a:hover
+  a.link:hover
     border-bottom: 2px solid white
 
   img
@@ -29,6 +42,9 @@ nav.sticky
     position: relative
     top: -15px
     left: -13px
+    @media (max-width: 750px)
+      float: left
+      left: 0
 
   span
     float: left
@@ -39,6 +55,15 @@ nav.sticky
     li
       float: left
 
+      .work 
+        @media (max-width: 570px)
+          margin: 0 10px    
+          paddiing-right: 20px  
+
+      .me  
+        @media (max-width: 570px)  
+          margin: 0 0 0 12px
+
       &:first-child:after
         content: ''
         size: .5em
@@ -46,5 +71,9 @@ nav.sticky
         background-color: white
         display: inline-block
         margin: 0 20px
-        margin-bottom: .125em
+        margin-bottom: .3em
+        @media (max-width: 420px)
+          // content: none
+          margin: 0 10px
+          margin-bottom: .3em
 

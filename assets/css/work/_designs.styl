@@ -5,12 +5,14 @@
 
 .home-page
   padding-top: 75px
+  @media (max-width: 570px)
+    padding-top: 20px
 
   section.designs
     outline-button-color(#ff8a7a, white, white, white)
 
-    min-width: 960px
-    max-width: 960px
+    // min-width: 960px
+    // max-width: 960px
 
     h4, ul, li
       line-height: 1.5em
@@ -30,20 +32,36 @@
       group()
       padding-top: 20px
       margin: 0 auto
-      min-width: 960px
-      max-width: 960px
+      // min-width: 960px
+      // max-width: 960px
+
+      @media (max-width: 980px)
+        margin: 0 10px
 
     img
       display: block
-      width: 100%
-      max-width 465px
+      max-width: 465px
       height: auto
+
+      @media (max-width: 980px)
+        max-width: 100%
 
     .project
       cursor: pointer
       column(6)
       margin-bottom: 20px
       position: relative
+
+      @media (max-width: 900px)
+        margin-bottom: 15px
+
+      @media (max-width: 600px)
+        margin-bottom: 10px
+
+      @media (max-width: 480px)
+        column(12)
+        margin-bottom: 15px
+
 
       &:hover .overlay
         opacity: 1

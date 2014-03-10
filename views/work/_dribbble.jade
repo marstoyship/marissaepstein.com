@@ -1,19 +1,23 @@
 include ../shared/_buttons
 
 mixin shot
-  .shot
-    img(width="300", height="225")
-    .overlay
-      h4 Loading...
-      a
-      mixin outline-button('200', 'View Shot', "//dribbble.com/mars.toyship")
+  .shot-container 
+    .shot
+      img(width="300", height="225")
+      .overlay
+        h4 Loading...
+        a
+        mixin outline-button('200', 'View Shot', "//dribbble.com/mars.toyship")
 
 section.dribbble
-  hr
+  hr.filligre
   h3 Dribbble
   img(src="/img/dribbble-pink.png", alt="dribbble", width="25", height="25")
 
   .shots
+    mixin shot
+    mixin shot
+    mixin shot
     mixin shot
     mixin shot
     mixin shot
