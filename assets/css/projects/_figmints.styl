@@ -1,0 +1,36 @@
+.project-casestudy.figmints
+  .project-hero
+    background: purple url('/img/bg-figmints.jpg') no-repeat
+    background-size: cover
+    text-shadow: 0px 0px 10px rgba(73, 73, 73, 0.5)
+
+  .project-section.branding
+    group()
+    padding-bottom: 50px
+    @media (max-width: 570px)
+      padding-bottom: 20px
+    img
+      column(6)
+      box-sizing: border-box
+      max-width: 100%
+              
+      @media (max-width: 570px)
+        column(12)
+
+  .project-section.web
+    group()
+    .stack
+      padding-bottom: 25px 
+      @media (max-width: 570px)
+        padding-bottom: 15px 
+
+    .half
+      column(6)
+      box-sizing: border-box
+      max-width: 100%
+      padding-left: 25px
+      padding-right: 25px
+
+      @media (max-width: 570px)
+        column(12)
+        padding-bottom: 35px 
