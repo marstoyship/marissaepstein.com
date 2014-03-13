@@ -97,14 +97,6 @@
     @media (max-width: 980px)
       padding: 0 20px
 
-    // @media (max-width: 750px)
-    // float:left
-    // .sidebar 
-    //   column(4)
-    //   display: inline-block
-    //   @media (max-width: 750px)
-    //     column(12)
-
     .img-container
       float: right
       padding-left: 50px
@@ -230,7 +222,9 @@
 
     section.education
       overflow: visible
-      width: 100%
+
+      @media (max-width: 960px)
+        width: 100%
       div
         margin-top: -48px
         margin-left: -10px
