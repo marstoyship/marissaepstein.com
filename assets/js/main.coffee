@@ -53,3 +53,9 @@ require ['jquery', 'lodash'], ($, _) ->
           $('a', s).attr 'href', url
 
       $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 6
+
+  $('.reveal-more-projects button').click (e) ->
+    $('.bottom-6').toggle()
+    $('.reveal-more-projects button').hide()
+    e.preventDefault()
+    false
