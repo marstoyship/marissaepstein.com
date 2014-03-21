@@ -1,5 +1,6 @@
 include ../_header
 include ../../shared/_buttons
+include ../_footer
 
 .project-casestudy.edtrips
   mixin header("Edtrips", "Taking education beyond the classroom.")
@@ -33,3 +34,7 @@ include ../../shared/_buttons
     img.half(src="/img/edtrips-ad-1.jpg", alt="Edtrips Ad One", width="480", height="610")
     img.half(src="/img/edtrips-ad-2.jpg", alt="Edtrips Ad Two", width="480", height="609")
 
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../branding", "Branding", "../passkey", "Passkey")

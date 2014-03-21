@@ -1,5 +1,6 @@
 include ../_header
 include ../../shared/_buttons
+include ../_footer
 
 .project-casestudy.community-teamwork
   mixin header("Community Teamwork", "Solutions that build communities and change lives.")
@@ -27,7 +28,7 @@ include ../../shared/_buttons
       hr.filligre
       h3 Print Design 
     img.trim(src="/img/community-teamwork-bizcard.jpg", alt="Community Teamwork Business Card", width="960", height="614")
-    img.stack(src="/img/community-teamwork-poster.png", alt="Community Teamwork Poster", width="960", height="713")
+    img(src="/img/community-teamwork-poster.png", alt="Community Teamwork Poster", width="960", height="713")
 
   section.project-section.web
     .project-section-title 
@@ -39,3 +40,8 @@ include ../../shared/_buttons
     img.stack(src="/img/community-teamwork-programs-chrome.png", alt="Community Teamwork Program Page", width="964", height="650")
     img.half(src="/img/community-teamwork-menu-iphone.png", alt="Community Teamwork Home Page Menu, on an iPhone", width="370", height="774")
     img.half(src="/img/community-teamwork-solutions-iphone.png", alt="Community Teamwork Solutions Page, on an iPhone", width="370", height="774")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../zoom-the-balloon", "Zoom the Balloon", "../toyship", "Toyship")

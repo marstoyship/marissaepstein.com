@@ -1,4 +1,5 @@
 include ../_header
+include ../_footer
 
 .project-casestudy.dinosofts
   mixin header("Dinosofts", "Baby's first fossil: connectable, huggable, prehistoric friends.")
@@ -34,5 +35,9 @@ include ../_header
 
     img.stack(src="/img/dinosofts-toys1.jpg", alt="Two Dinosofts Toys with Packaging", width="960", height="107")
     img.stack(src="/img/dinosofts-toys2.jpg", alt="One Dinosofts Toy with Packaging", width="960", height="107")
-    img.stack(src="/img/dinosofts-packaging.png", alt="Dinosofts Packaging Stickers", width="871", height="400")
-    
+    img(src="/img/dinosofts-packaging.png", alt="Dinosofts Packaging Stickers", width="871", height="400")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../passkey", "Passkey", "../clickfox", "Clickfox")

@@ -1,4 +1,5 @@
 include ../_header
+include ../_footer
 
 .project-casestudy.passkey
   mixin header("Passkey", "Online Booking Experience")
@@ -15,4 +16,9 @@ include ../_header
     img.stack(src="/img/passkey-2-landing.png", alt="Passkey Screen Design, Landing Page", width="964", height="650")
     img.stack(src="/img/passkey-3-room.png", alt="Passkey Screen Design, Room Page with Gallery View", width="964", height="650")
     img.stack(src="/img/passkey-4-map.png", alt="Passkey Screen Design, Map View", width="964", height="650")
-    img.stack(src="/img/passkey-5-portal.png", alt="Passkey Screen Design, Guest Deck Page", width="964", height="650")
+    img(src="/img/passkey-5-portal.png", alt="Passkey Screen Design, Guest Deck Page", width="964", height="650")
+  
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../edtrips", "Edtrips", "../dinosofts", "Dinosofts")

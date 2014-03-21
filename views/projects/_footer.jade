@@ -1,0 +1,15 @@
+mixin project-nav(prev_href, prev_title, next_href, next_title)
+  .project-nav
+    .left
+      a.link-left(href=prev_href)
+        img.arrow-left(src="/img/project-nav-left.png", alt="Left", title="Left") 
+        span=prev_title
+
+    .grid 
+      a(href="/#work")
+        img(src="/img/project-nav-grid.png", alt="My Work", title="My Work") 
+
+    .right
+      a.link-left(href=next_href)
+        span=next_title
+        img.arrow-right(src="/img/project-nav-right.png", alt="Right", title="Right")

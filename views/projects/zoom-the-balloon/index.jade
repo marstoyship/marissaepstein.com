@@ -1,6 +1,6 @@
 include ../_header
 include ../../shared/_buttons
-//- include ../_footer
+include ../_footer
 
 .project-casestudy.zoom
   mixin header("Zoom the Balloon", "...wants to go to the moon!")
@@ -17,7 +17,9 @@ include ../../shared/_buttons
 
     img.stack(src="/img/zoom-pregame-chrome.png", alt="Zoom the Balloon, Pre-Game Screen", width="964", height="754")
     img.stack(src="/img/zoom-game-chrome.png", alt="Zoom the Balloon, Game Level Screen", width="964", height="754")
-    img.stack(src="/img/zoom-hiscores-chrome.png", alt="Zoom the Balloon, High Scores", width="964", height="754")
-
-  //- mixin left-nav("../perfect-pears")
-  //- mixin right-nav("../community-teamwork")
+    img(src="/img/zoom-hiscores-chrome.png", alt="Zoom the Balloon, High Scores", width="964", height="754")
+  
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../perfect-pears", "Perfect Pears", "../community-teamwork", "Community Teamwork")
