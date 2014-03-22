@@ -1,5 +1,6 @@
 include ../_header
 include ../../shared/_buttons
+include ../_footer
 
 .project-casestudy.clickfox
   mixin header("Clickfox", "Essential to big data strategy.")
@@ -19,3 +20,8 @@ include ../../shared/_buttons
     img.stack(src="/img/clickfox-content.png", alt="Clickfox Products Page", width="964", height="650")      
     img.half(src="/img/clickfox-home-iphone.png", alt="Clickfox Landing Page, on an iPhone", width="370", height="774")
     img.half(src="/img/clickfox-menu-iphone.png", alt="Clickfox Responsive Menu, on an iPhone", width="370", height="774")
+ 
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../dinosofts", "Dinosofts", "../bookscanner", "Bookscanner")

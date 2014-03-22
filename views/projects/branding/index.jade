@@ -1,4 +1,5 @@
 include ../_header
+include ../_footer
 
 .project-casestudy.branding
   mixin header("BRANDING™", "Here's a collection of some stand-alone branding projects.")
@@ -59,3 +60,8 @@ include ../_header
       hr.odd
       .brand.octopus
         img(src="/img/b16_octopus.jpg", alt="Octopus", title="Octopus")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../toyship", "Toyship", "../edtrips", "Edtrips")

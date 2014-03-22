@@ -1,5 +1,6 @@
 include ../_header
 include ../../shared/_buttons
+include ../_footer
 
 .project-casestudy.perfect-pears
   mixin header("Perfect Pears", "Your perfect match for everything wedding.")
@@ -36,4 +37,8 @@ include ../../shared/_buttons
     img.half(src="/img/perfect-pears-planner-iphone.png", alt="Pears Planner Marketing Website, on an iPhone", width="370", height="774")
     img.half(src="/img/perfect-pears-calculator-iphone.png", alt="Pears Pictures Pricing Calculator", width="370", height="774")
     img.white(src="/img/perfect-pears-print-ad-2.png", alt="Pears Pages Postcard", width="960", height="629")
-      
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../figmints", "Figmints", "../zoom-the-balloon", "Zoom the Balloon")

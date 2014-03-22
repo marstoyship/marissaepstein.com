@@ -1,4 +1,5 @@
 include ../_header
+include ../_footer
 
 .project-casestudy.packaging
     mixin header("PACKAGING", "A mix of packaging designs: some can be found on shelves, others are just concept work.")
@@ -18,4 +19,9 @@ include ../_header
 
     img.stack(src="/img/packaging-charmin.jpg", alt="Charmin Freshmates Packaging Concept", width="960", height="542")
     img.stack(src="/img/packaging-malibu-1.jpg", alt="Malibu Bottle Design, Concept 1", width="960", height="924")
-    img.stack(src="/img/packaging-malibu-2.jpg", alt="Malibu Bottle Design, Concept 2", width="960", height="924")
+    img(src="/img/packaging-malibu-2.jpg", alt="Malibu Bottle Design, Concept 2", width="960", height="924")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../bookscanner", "Bookscanner", "../figmints", "Figmints")

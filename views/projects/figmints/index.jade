@@ -1,5 +1,6 @@
 include ../_header
 include ../../shared/_buttons
+include ../_footer
 
 .project-casestudy.figmints
   mixin header("Figmints", "Whatever it takes to tell your story in the most beautiful way possible.")
@@ -36,4 +37,9 @@ include ../../shared/_buttons
       h3 Print Mailers
 
     img.stack(src="/img/figmints-holidaycard.jpg", alt="Figmints Christman Card", width="800", height="600")
-    img.white.stack(src="/img/figmints-video-mailer.jpg", alt="Figmints Mailers", width="800", height="600")
+    img.white(src="/img/figmints-video-mailer.jpg", alt="Figmints Mailers", width="800", height="600")
+
+  section.project-section.footer
+      .project-section-title
+        hr.filligre
+      mixin project-nav("../packaging", "Packaging", "../perfect-pears", "Perfect Pears")

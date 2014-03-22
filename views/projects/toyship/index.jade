@@ -1,5 +1,6 @@
 include ../_header
 include ../../shared/_buttons
+include ../_footer
 
 .project-casestudy.toyship
   mixin header("Toyship", "Designer toy boutique meets DIY education.")
@@ -40,9 +41,14 @@ include ../../shared/_buttons
     img(src="/img/toyship-book-cover.png", alt="Toyship Hardcover Book", width="890", height="878")
     img(src="/img/toyship-book-interiors.png", alt="Toyship Hardcover Book Interior, Pamphlet, and Handouts", width="880", height="1094")
 
-   section.project-section.web
+  section.project-section.web
     .project-section-title 
       hr.filligre
       h3 Web Design
 
     img(src="/img/toyship-website.png", alt="Toyship Website on iPad", width="644", height="960")
+
+  section.project-section.footer
+      .project-section-title
+        hr.filligre
+      mixin project-nav("../community-teamwork", "Community Teamwork", "../branding", "Branding")
