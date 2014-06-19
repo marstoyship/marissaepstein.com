@@ -52,7 +52,7 @@ require ['jquery', 'lodash'], ($, _) ->
           $('h4', s).text title
           $('a', s).attr 'href', url
 
-      $.jribbble.getShotsByPlayerId 'mars.toyship', onShots, page: 1, per_page: 6
+      $.jribbble.getShotsByPlayerId 'marstoyship', onShots, page: 1, per_page: 6
 
   $('.reveal-more-projects button').click (e) ->
     $('.bottom-6').toggle()
