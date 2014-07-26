@@ -1,4 +1,5 @@
 include ../_header
+include ../_footer
 
 .project-casestudy.clue
   mixin header("Clue", "I didn't do it!")
@@ -17,3 +18,7 @@ include ../_header
     img.half(src="/img/clue-iphone-3.png", alt="All Aboard - iPhone, Card Dashboard", width="377", height="704")
     img.half(src="/img/clue-iphone-4.png", alt="All Aboard - iPhone, Show a Card", width="377", height="704")
     
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../collaborate", "Collaborate", "../packaging", "packaging")
