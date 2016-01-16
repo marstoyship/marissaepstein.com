@@ -6,7 +6,7 @@ require.config
   paths:
     jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min'
     lodash: '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min'
-    jribbble: '/js/jquery.jribbble-1.0.1.ugly'
+    jribbble: '/js/jribbble.min'
 
 require ['jquery', 'lodash'], ($, _) ->
   require ['jribbble'], ->
@@ -42,17 +42,18 @@ require ['jquery', 'lodash'], ($, _) ->
 
         $.trim(title).substring(0, 10).split(" ").slice(0, -1).join(" ") + "...";
 
-      onShots = (page) ->
+      onShots = (shots) ->
         $('.shot').each (i, s) ->
-          url   = page.shots[i].short_url
-          thumb = page.shots[i].image_400_url or page.shots[i].image_url
-          title = $.trim(page.shots[i].title)
+          url   = shots[i].html_url
+          thumb = shots[i].images.hidpi or shots[i].images.normal or shots[i].images.teaser
+          title = $.trim(shots[i].title)
 
           $('img', s).attr 'src', thumb
           $('h4', s).text title
           $('a', s).attr 'href', url
 
-      $.jribbble.getShotsByPlayerId 'marstoyship', onShots, page: 1, per_page: 6
+      $.jribbble.setToken('19a48c8b842f4f1a6c630f0116209cba4b787dc6f42266f7a6fd0301d1610411')
+      $.jribbble.users('marstoyship').shots({page: 1, per_page: 6}).then(onShots)
 
   $('.reveal-more-projects button').click (e) ->
     $('.bottom-6').toggle()
