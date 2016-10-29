@@ -1,10 +1,12 @@
 .project-casestudy.branding
   .project-hero
+      background: rgba(201, 36, 14, 1) url('/img/bg-branding-header.jpg') no-repeat
+      background-attachment: fixed
       h1, h2, p
         text-shadow: 0px 0px 10px rgba(50, 50, 50, 0.5)
 
 section.brands
-  max-width: 960px
+  max-width: 940px
   position: relative
   group()
   margin: 0 auto
@@ -17,10 +19,11 @@ section.brands
   .brand 
     position: relative
     column(6)
+    overflow: show
     @media (max-width: 570px)
       column(12)
       float: none
-      width: 90%
+      width: 99%
       margin: 0 auto
 
     img

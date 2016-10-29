@@ -7,7 +7,52 @@ mixin project(name, image, link, skills, type)
       h4= name
       ul
         - for s in skills
-          li= s
+          - if(s == "Branding")
+            li
+              img.hover-icon(src="/img/hover_branding.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Web")
+            li
+              img.hover-icon(src="/img/hover_web.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Mobile")
+            li
+              img.hover-icon(src="/img/hover_mobile.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "UI/UX")
+            li
+              img.hover-icon(src="/img/hover_ux.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Print")
+            li
+              img.hover-icon(src="/img/hover_print.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "App Design")
+            li
+              img.hover-icon(src="/img/hover_app.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Social")
+            li
+              img.hover-icon(src="/img/hover_social.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Game Design")
+            li
+              img.hover-icon(src="/img/hover_game.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Toy Design")
+            li
+              img.hover-icon(src="/img/hover_toy.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Packaging")
+            li
+              img.hover-icon(src="/img/hover_packaging.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Photography")
+            li
+              img.hover-icon(src="/img/hover_photography.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else
+            li= s
       a(href=link)
       - if(type == "site")
         mixin outline-button('144', 'View Site', link)
