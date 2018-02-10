@@ -1,0 +1,9 @@
+{
+    "name": "marissaepstein.com",
+    "description": "marissaepstein.com",
+    "version": "0.0.1",
+    "author": "marissa epstein",
+    "dependencies": {
+        "roots": "2.0.6"
+    }
+}
