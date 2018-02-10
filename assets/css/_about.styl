@@ -87,7 +87,6 @@
 
   section
     position: relative
-    overflow: hidden 
 
     header
       text-align: center
@@ -119,7 +118,7 @@
         padding-left: 0
         padding-bottom: 0
         margin: 0 auto
-
+ 
       img
         width:100%
 
@@ -194,7 +193,14 @@
     line-height: 24px
     padding-bottom: 55px
     @media (max-width: 960px)
-      padding-bottom: 10px
+      padding-left: 20px
+      padding-right: 20px
+
+  section.education
+    overflow: visible
+    @media (max-width: 960px)
+      padding-left: 0px
+      padding-right: 20px
 
     h3, h4,  p
       padding: 0
@@ -222,9 +228,6 @@
       margin-right: 2%
       @media (max-width: 960px)
         column(12)
-
-    section.education
-      overflow: visible
 
       div
         margin-top: -48px
