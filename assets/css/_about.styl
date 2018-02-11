@@ -187,12 +187,15 @@
           content: "• "
           color: red
 
-  section.experience 
+  section.experience, section.education 
     group()
     font-size: 15px
     line-height: 24px
     padding-bottom: 55px
     @media (max-width: 960px)
+      margin-left: 0
+      padding-left: 30px
+      padding-right: 40px
       padding-bottom: 10px
 
     h3, h4,  p
@@ -222,22 +225,18 @@
       @media (max-width: 960px)
         column(12)
 
-    section.education
-      overflow: visible 
-      
-      div
-        margin-top: -48px
-        margin-left: -10px
-        padding-top: 48px
-        padding-left: 48px
-        padding-bottom: 86px
-        border-left: 2px solid light-grey
-        @media (max-width: 960px)
-          border: none
-          margin-left: 0
-          padding-left: 30px
-          padding-right: 40px
-          padding-bottom: 10px
-
-
+  section.education 
+    @media (max-width:960px)
+      padding-left: 0px
+    div
+      margin-top: -48px
+      padding-top: 48px
+      padding-left: 48px
+      border-left: 2px solid light-grey
+      @media (max-width: 960px)
+        border: none
+        margin-left: 0px
+        padding-right: 40px
+        padding-left: 0px
+        padding-bottom: 10px
 
