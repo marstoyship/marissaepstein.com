@@ -1,0 +1,54 @@
+include ../_header
+include ../../shared/_buttons
+include ../_footer
+
+.project-casestudy.toyship
+  mixin header("Toyship", "Designer toy boutique meets DIY education.")
+
+  section.project-section.project-description
+    p I started toyship, a labor of love, to distribute the results of my “Toyland” thesis, completed under UC's DAAP program. After learning how to make my own set of resin toys, Matryoshkas, I designed a hardcover and pamphlet book to walk others through the process of toy making and the culture of designer toys. The toyship design project also includes branding, copywriting, photography, a website, and packaging: each toy comes with a toyship card and hand-numbered toy card, all inside a stamped burlap bag.
+    
+    mixin outline-button('145', 'Visit site', 'http://marstoyship.com/')
+ 
+  section.project-section.branding
+    .project-section-title 
+      hr.filligre
+      h3 branding
+
+    img(src="/img/toyship_logo.jpg", alt="toyship Logo", width="700", height="449")
+
+  section.project-section.toys
+    .project-section-title 
+      hr.filligre
+      h3 Toys
+
+    img.stack(src="/img/toyship_shelves.jpg", alt="All 18 Matryoshka Toys", width="800", height="800")
+    img.stack(src="/img/toyship_all-toys.jpg", alt="All 3 Color Sets", width="800", height="800")
+    img.stack.end(src="/img/toyship_zombies.jpg", alt="Matryoshka Zombies", width="800", height="800")
+
+  section.project-section.packaging
+    .project-section-title 
+      hr.filligre
+      h3 Packaging
+
+    img(src="/img/toyship_toy-packaging.jpg", alt="Toyship Matryoshka Toy with Packaging Set", width="800", height="731")
+
+  section.project-section.books
+    .project-section-title 
+      hr.filligre
+      h3 Book Design
+
+    img(src="/img/toyship-book-cover.png", alt="Toyship Hardcover Book", width="890", height="878")
+    img(src="/img/toyship-book-interiors.png", alt="Toyship Hardcover Book Interior, Pamphlet, and Handouts", width="880", height="1094")
+
+  section.project-section.web
+    .project-section-title 
+      hr.filligre
+      h3 Web Design
+
+    img(src="/img/toyship-website.png", alt="Toyship Website on iPad", width="644", height="960")
+
+  section.project-section.footer
+      .project-section-title
+        hr.filligre
+      mixin project-nav("../branding", "Branding", "../yearup", "Year up")

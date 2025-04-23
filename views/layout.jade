@@ -1,0 +1,26 @@
+!!!
+html
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content="Marissa Epstein's Portfolio.")
+    meta(name='author', content='Marissa Epstein')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+    title= title
+
+    link(rel='stylesheet', type='text/css', href='https://cloud.typography.com/6114452/742482/css/fonts.css')
+    link(rel='stylesheet', type='text/css', href='/css/master.css')
+  body
+    include shared/_nav
+
+    != content
+
+    include shared/_footer
+
+    //- add other scripts through require.js, not here
+    script(data-main='/js/main', src='/js/require.js')
+
+    //- this must be included for live reload to work in developement
+    //- it will be automatically ignored when deployed
+    != livereload

@@ -1,0 +1,25 @@
+include ../_header
+include ../../shared/_buttons
+include ../_footer
+
+.project-casestudy.score
+  mixin header("Score!", "A magazine for and by papercrafting nerds.")
+
+  section.project-section.project-description
+    p Score! is a magazine for DIY papercraft toy makers, to share news about artists and a toy flat readers can pop out and assemble with each issue. This project included editing, writing, branding, and layout design. The logo is cut out of each cover, allowing a sneak-peak at imagery related to the main story. 
+ 
+  section.project-section.print
+    .project-section-title 
+      hr.filligre
+      h3 Magazine Design
+
+    img.stack(src="/img/score-covers.jpg", alt="Score! cover design", width="960", height="652")
+    img.stack(src="/img/score-3.jpg", alt="Score! page layout 1", width="960", height="652")
+    img.stack(src="/img/score-1.jpg", alt="Score! page layout 2", width="960", height="652")    
+    img.stack(src="/img/score-2.jpg", alt="Score! page layout 3", width="960", height="652")
+    img.stack(src="/img/score-4.jpg", alt="Score! page layout 4", width="960", height="652")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../bookscanner", "Bookscanner", "../remobilize", "Remobilize")

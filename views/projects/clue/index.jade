@@ -1,0 +1,24 @@
+include ../_header
+include ../_footer
+
+.project-casestudy.clue
+  mixin header("Clue", "I didn't do it!")
+
+  section.project-section.project-description
+    p Participating in the 2013 Hasbroathon weekend with the Figmints team, combined with an obsessive fandom for both the board game and movie <i>Clue</i>, could only lead to this. The team demoed All Aboard, a platform for developers to launch multi-device games. Below, that concept is illustrated with a modern redesign of Clue, including the iPad board and several player's iPhone hands. 
+
+  section.project-section.app
+    .project-section-title 
+      hr.filligre
+      h3 App Design
+
+    img.stack(src="/img/clue-ipad.png", alt="All Aboard - Clue, iPad Board", width="960", height="644")
+    img.half(src="/img/clue-iphone-1.png", alt="All Aboard - iPhone, Choose a Character", width="377", height="704")
+    img.half(src="/img/clue-iphone-2.png", alt="All Aboard - iPhone, Shake to Roll", width="377", height="704")
+    img.half(src="/img/clue-iphone-3.png", alt="All Aboard - iPhone, Card Dashboard", width="377", height="704")
+    img.half(src="/img/clue-iphone-4.png", alt="All Aboard - iPhone, Show a Card", width="377", height="704")
+    
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../collaborate", "Collaborate", "../packaging", "packaging")

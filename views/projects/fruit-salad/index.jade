@@ -1,0 +1,25 @@
+include ../_header
+include ../_footer
+
+.project-casestudy.fruit-salad
+  mixin header("Fruit Salad", "Still lifes of an under-appreciated bunch.")
+
+  section.project-section.project-description
+    p Fruit salad is a throwback on many levels. This college project was the last of many requiring traditional photography. Man, I miss that dark room. These still lifes were shot on a sweep with a large format camera. We're talking 4x5 inch negatives that cost dollars each, and are loaded one at a time. But it was worth it, to lay out a large, hand-bound hardcover of a dozen color fruit photographs. Below is my favorite mix. 
+
+  section.project-section.photography
+    .project-section-title 
+      hr.filligre
+      h3 Photography
+
+    img.half(src="/img/fruit-1-grapefruit.jpg", alt="Grapfruit Photograph", width="470", height="585")
+    img.half(src="/img/fruit-2-cantaloupe.jpg", alt="Canteloupe Photograph", width="470", height="585")   
+    img.half(src="/img/fruit-5-banana.jpg", alt="Banana Photograph", width="470", height="585")
+    img.half(src="/img/fruit-6-pineapple.jpg", alt="Pineapple Photograph", width="470", height="585")
+    img.half(src="/img/fruit-7-starfruit.jpg", alt="Starfruit Photograph", width="470", height="585")
+    img.half(src="/img/fruit-8-coconut.jpg", alt="Coconut Photograph", width="470", height="585")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../remobilize", "Remobilize", "../collaborate", "Collaborate")

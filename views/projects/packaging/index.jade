@@ -1,0 +1,27 @@
+include ../_header
+include ../_footer
+
+.project-casestudy.packaging
+    mixin header("PACKAGING", "A mix of packaging designs: some can be found on shelves, others are just concept work.")
+
+  section.project-section.on-shelf
+    .project-section-title 
+      hr.filligre
+      h3 On Shelf
+
+    img(src="/img/packaging-mac-athenos.jpg", alt="On Shelf Packaging, Cheesy Explosion Mac and Cheese, and Athenos Greek Yogurt", width="960", height="619")
+    img(src="/img/packaging-digiorno.jpg", alt="On Shelf Packaging, Digiorno", width="960", height="773")
+
+  section.project-section.concept 
+    .project-section-title 
+      hr.filligre
+      h3 Concept Designs
+
+    img.stack(src="/img/packaging-charmin.jpg", alt="Charmin Freshmates Packaging Concept", width="960", height="542")
+    img.stack(src="/img/packaging-malibu-1.jpg", alt="Malibu Bottle Design, Concept 1", width="960", height="924")
+    img(src="/img/packaging-malibu-2.jpg", alt="Malibu Bottle Design, Concept 2", width="960", height="924")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../clue", "Clue", "../figmints", "Figmints")

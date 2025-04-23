@@ -1,0 +1,49 @@
+.project-nav
+  group()
+  max-width: 960px
+  text-align: center
+  margin-bottom: 32px
+  @media (max-width: 750px)
+    margin-bottom: 16px
+
+  .left
+    float: left
+
+    img
+      margin-left: 10px
+      margin-right:30px
+
+
+  .right
+    float: right
+    
+    img
+      margin-right: 10px
+      margin-left:30px
+
+  .grid
+    position: absolute
+    left: 0
+    right: 0
+
+    a
+      width: 42px
+      margin: 0 auto
+
+  img
+    display: inline
+
+  a
+    color: black
+    @extends $gotham-medium
+    font-size: 18px
+    display: block
+    position: relative
+    z-index: 10
+    height: 42px
+
+  span
+    position: relative
+    top: -12px
+    @media (max-width: 820px)
+      display: none

@@ -1,0 +1,98 @@
+include ../shared/_buttons
+
+mixin project(name, image, link, skills, type)
+  .project
+    img(src="/img/#{image}", alt=name, width="465", height="465")
+    .overlay
+      h4= name
+      ul
+        - for s in skills
+          - if(s == "Branding")
+            li
+              img.hover-icon(src="/img/hover_branding.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Web")
+            li
+              img.hover-icon(src="/img/hover_web.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Mobile")
+            li
+              img.hover-icon(src="/img/hover_mobile.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "UI/UX")
+            li
+              img.hover-icon(src="/img/hover_ux.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Print")
+            li
+              img.hover-icon(src="/img/hover_print.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "App Design")
+            li
+              img.hover-icon(src="/img/hover_app.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Social")
+            li
+              img.hover-icon(src="/img/hover_social.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Game Design")
+            li
+              img.hover-icon(src="/img/hover_game.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Toy Design")
+            li
+              img.hover-icon(src="/img/hover_toy.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Packaging")
+            li
+              img.hover-icon(src="/img/hover_packaging.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else if(s == "Photography")
+            li
+              img.hover-icon(src="/img/hover_photography.svg", alt=icon, width="30", height="30")
+              span= s 
+          - else
+            li= s
+      a(href=link)
+      - if(type == "site")
+        mixin outline-button('144', 'View Site', link)
+      - if(type == "study")
+        mixin outline-button('222', 'View Case Study', link)
+
+section.designs
+  hr.filligre
+  h3 Designs
+
+  div
+    div.top-6
+      mixin project("Figmints", "465-figmints.jpg", "/projects/figmints", ["Branding", "Web", "Mobile", "UI/UX", "Print"], "study")
+      mixin project("Perfect Pears", "465-perfectpears.jpg", "/projects/perfect-pears", ["Web", "UI/UX", "App Design", "Print"], "study")
+      mixin project("Achievery", "465_achievery.jpg", "/projects/achievery", ["Web", "UI/UX", "App Design"], "study")
+      mixin project("Community Teamwork", "465_cti.jpg", "/projects/community-teamwork", ["Branding", "Web", "UI/UX", "Mobile", "Print", "Social"], "study")
+      mixin project("Zoom the Balloon", "465_zoom.jpg", "/projects/zoom-the-balloon", ["Web", "Game Design"], "study")
+      mixin project("Branding", "465_branding.jpg", "/projects/branding", ["A collection of branding projects."], "study")   
+
+
+    div.bottom-6
+
+      mixin project("Toyship", "465-toyship.jpg", "/projects/toyship", ["Branding", "Toy Design", "Print", "Packaging"],  "study")
+      mixin project("Mojotech", "465_mojotech.jpg", "/projects/mojotech", ["Branding", "Web", "UI/UX", "Print"], "study")
+      mixin project("Yearup", "465_yearup.jpg", "/projects/yearup", ["Web", "UI/UX", "Mobile"], "study")
+      mixin project("EdTrips", "465-edtrips.jpg", "/projects/edtrips",["Branding", "Web", "UI/UX", "Print"], "study")
+      mixin project("Passkey", "465_passkey-2.jpg", "/projects/passkey",["Web", "UI/UX"], "study")    
+      mixin project("Dinosofts", "465-dinosofts-2.jpg", "/projects/dinosofts", ["Branding", "Toy Design", "Packaging"], "study") 
+      mixin project("Clickfox", "465_clickfox.jpg", "/projects/clickfox", ["Web", "Mobile", "UI/UX"], "study")  
+      mixin project("BookScanner", "465-bookscanner.jpg", "/projects/bookscanner", ["Branding", "Mobile", "UI/UX", "App Design"], "study")
+
+      mixin project("Score!", "465_score.jpg", "/projects/score", ["Branding", "Print"], "study")
+      mixin project("Remobilize", "465_remobilize.jpg", "/projects/remobilize",["Branding", "Print", "Web"], "study")
+      mixin project("Fruit Salad", "465_fruit-salad.jpg", "/projects/fruit-salad", ["Photography"], "study")
+      mixin project("Collaborate", "465_collaborate.jpg", "/projects/collaborate", ["Web", "Mobile", "UI/UX"], "study")
+      mixin project("Clue", "465_clue.jpg", "/projects/clue",["Web", "Mobile", "UI/UX"], "study")
+      mixin project("Packaging", "465-packaging.jpg", "/projects/packaging", ["A collection of packaging projects."], "study")
+    
+    .reveal-more-projects
+      mixin solid-button('300', 'Show More Work', '#')
+      
+  
+

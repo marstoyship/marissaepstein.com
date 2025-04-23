@@ -1,0 +1,43 @@
+include ../_header
+include ../../shared/_buttons
+include ../_footer
+
+.project-casestudy.achievery
+  mixin header("Achievery", "A digital badge system to support your learning model.")
+
+  section.project-section.project-description
+    p Achievery had recently launched their online badge platform and wanted <a href='http://figmints.com/'>Figmints</a> to take the experience to the next level. We considered every part of the experience, starting with the branding and strategy. I led the architecture process, defining user flows and functionality on both a high and granular level, and directed wireframe execution. The new UI let the Achievery’s style embody their mission: to help achievers carve out their own path.
+    
+    mixin outline-button('145', 'Visit site', 'http://achievery.com/')
+ 
+  section.project-section.branding
+    .project-section-title 
+      hr.filligre
+      h3 Branding
+
+    img.half(src="/img/achievery-logo.png", alt="Achievery Logo", width="475", height="294")
+    img.half(src="/img/achievery-cards.png", alt="Achievery Business Card", width="469", height="294")
+ 
+  section.project-section.ux
+    .project-section-title 
+      hr.filligre
+      h3 Architecture &amp; UX
+
+    img.stack(src="/img/achievery-sitemap.jpg", alt="Achievery Architecture", width="960", height="773")
+    img.half(src="/img/achievery-wire-1.jpg", alt="Achievery Badge Wireframe", width="440", height="601")
+    img.half(src="/img/achievery-wire-2.jpg", alt="Achievery Application Wireframe", width="440", height="518")
+    
+  section.project-section.web
+    .project-section-title 
+      hr.filligre
+      h3 Web Design 
+
+    img.stack(src="/img/achievery-marketing.png", alt="Achievery Marketing Landing Page, Hero", width="964", height="650")
+    img.stack(src="/img/achievery-gui.png", alt="Achievery GUI Kit", width="964", height="852")
+    img.stack(src="/img/achievery-app.png", alt="Achievery App, Sign Up Page", width="964", height="650")
+    img.stack(src="/img/achievery-app-2.png", alt="Achievery App, Profile Page", width="964", height="1233")
+
+  section.project-section.footer
+    .project-section-title
+      hr.filligre
+    mixin project-nav("../perfect-pears", "Perfect Pears", "../community-teamwork", "Community Teamwork")
